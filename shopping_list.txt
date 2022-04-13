@@ -2,4 +2,4 @@
 2.eggs x15
 3.cake x1
 4.candels x25
-5.soap x3
+5.soap x1
