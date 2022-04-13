@@ -1,5 +1,5 @@
 1.milk x1
 2.eggs x15
 3.cake x1
-4.candels x25
+4.apples x25
 5.soap x3
