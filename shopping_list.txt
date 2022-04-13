@@ -3,3 +3,4 @@
 3.cake x1
 4.apples x25
 5.soap x3
+6.adhesive labels 
