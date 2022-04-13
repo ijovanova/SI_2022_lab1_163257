@@ -1,0 +1,197 @@
+2. i 3. https://github.com/ijovanova/SI_2022_lab1_163257
+
+4. Откако ќе го креирате репозиториумот, клонирајте го на вашиот компјутер. По
+клонирање на репозиториумот, влезете во истиот со цел да можете да ги
+извршувате следните задачи.
+ git clone https://github.com/ijovanova/SI_2022_lab1_163257
+Cloning into 'SI_2022_lab1_163257'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+
+5. Во локалниот репозиториум додадете текстуална датотека shopping_list.txt.
+Додадете во датотеката 5 случајни производи (секој во нов ред) и направете
+commit со порака “Add 5 items to the shopping list”
+Ivana@DESKTOP-MEP6UIC MINGW64 ~/Documents/GitWorkspace/SI_2022_lab1_163257 (master)
+$ vim shopping_list.txt
+
+Ivana@DESKTOP-MEP6UIC MINGW64 ~/Documents/GitWorkspace/SI_2022_lab1_163257 (master)
+$ git add shopping_list.txt
+warning: LF will be replaced by CRLF in SI_2022_lab1_163257/shopping_list.txt.
+The file will have its original line endings in your working directory
+
+Ivana@DESKTOP-MEP6UIC MINGW64 ~/Documents/GitWorkspace/SI_2022_lab1_163257 (master)
+$ git commit -m "Add 5 items to the shopping list"
+[master (root-commit) f4a9918] Add 5 items to the shopping list
+ 1 file changed, 5 insertions(+)
+ create mode 100644 SI_2022_lab1_163257/shopping_list.txt
+
+6. На секоја од 5те претходни ставки, додадете им количина (во следниот формат.
+bread x 2). Направете commit со порака “Add quantities to the items.”
+Ivana@DESKTOP-MEP6UIC MINGW64 ~/Documents/GitWorkspace/SI_2022_lab1_163257 (master)
+$ vi shopping_list.txt
+Ivana@DESKTOP-MEP6UIC MINGW64 ~/Documents/GitWorkspace/SI_2022_lab1_163257 (master)
+$ git add shopping_list.txt
+warning: LF will be replaced by CRLF in SI_2022_lab1_163257/shopping_list.txt.
+The file will have its original line endings in your working directory
+
+Ivana@DESKTOP-MEP6UIC MINGW64 ~/Documents/GitWorkspace/SI_2022_lab1_163257 (master)
+$ git commit -m "Add quantutues to the items."
+[master 4a7bed3] Add quantutues to the items.
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+7. Креирајте 2 гранки: branch1 и branch2
+Ivana@DESKTOP-MEP6UIC MINGW64 ~/Documents/GitWorkspace/SI_2022_lab1_163257 (master)
+$ git checkout -b branch1
+Switched to a new branch 'branch1'
+
+Ivana@DESKTOP-MEP6UIC MINGW64 ~/Documents/GitWorkspace/SI_2022_lab1_163257 (branch1)
+$ git checkout master
+Switched to branch 'master'
+
+Ivana@DESKTOP-MEP6UIC MINGW64 ~/Documents/GitWorkspace/SI_2022_lab1_163257 (master)
+$ git checkout -b branch2
+Switched to a new branch 'branch2'
+
+9. Синхронизирајте ги сите гранки со оддалечениот репозиториум.
+Ivana@DESKTOP-MEP6UIC MINGW64 ~/Documents/GitWorkspace/SI_2022_lab1_163257 (branch2)
+$ git remote add origin ^[[200~/Documents/GitWorkspace/SI_2022_lab1_163257~
+
+Ivana@DESKTOP-MEP6UIC MINGW64 ~/Documents/GitWorkspace/SI_2022_lab1_163257 (branch2)
+$ git push origin master
+
+Ivana@DESKTOP-MEP6UIC MINGW64 ~/Documents/GitWorkspace/SI_2022_lab1_163257 (BARE:master)
+$ git push origin branch1
+
+vana@DESKTOP-MEP6UIC MINGW64 ~/Documents/GitWorkspace/SI_2022_lab1_163257 (BARE:master)
+$ git push origin branch2
+
+10. Префрлете се на гранката branch1.
+
+Ivana@DESKTOP-MEP6UIC MINGW64 ~/Documents/GitWorkspace/SI_2022_lab1_163257 (master)
+$ git checkout branch1
+
+11. Сменете ја количината на петтата ставка во shopping_list.txt и направете commit
+со порака “Change quantity of item #5”.
+
+Ivana@DESKTOP-MEP6UIC MINGW64 ~/Documents/GitWorkspace/SI_2022_lab1_163257 (branch1)
+$ vi shopping_list.txt
+Ivana@DESKTOP-MEP6UIC MINGW64 ~/Documents/GitWorkspace/SI_2022_lab1_163257 (branch1)
+$ git add shopping_list.txt
+warning: LF will be replaced by CRLF in shopping_list.txt.
+The file will have its original line endings in your working directory
+
+Ivana@DESKTOP-MEP6UIC MINGW64 ~/Documents/GitWorkspace/SI_2022_lab1_163257 (branch1)
+$ git commit -m "Change quantity of item #5"
+[branch1 3ab57ee] Change quantity of item #5
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+12. Вратете се на гранката master
+Ivana@DESKTOP-MEP6UIC MINGW64 ~/Documents/GitWorkspace/SI_2022_lab1_163257 (branch1)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+13. Сменете ја количината на втората ставка во shopping_list.txt и направете commit
+со порака “Change quantity of item #2”.
+Ivana@DESKTOP-MEP6UIC MINGW64 ~/Documents/GitWorkspace/SI_2022_lab1_163257 (master)
+$ vi shopping_list.txt
+
+Ivana@DESKTOP-MEP6UIC MINGW64 ~/Documents/GitWorkspace/SI_2022_lab1_163257 (master)
+$ git add shopping_list.txt
+
+Ivana@DESKTOP-MEP6UIC MINGW64 ~/Documents/GitWorkspace/SI_2022_lab1_163257 (master)
+$ git commit -m "Change quantity of item #2"
+[master c3a0181] Change quantity of item #2
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+14. Синхронизирајте ги сите гранки со оддалечениот репозиториум
+git push origin master, git push origin branch1, git push origin branch2
+
+15. Префрлете се на гранката branch2.
+Ivana@DESKTOP-MEP6UIC MINGW64 ~/Documents/GitWorkspace/SI_2022_lab1_163257 (branch1)
+$ git checkout branch2
+Switched to branch 'branch2'
+Your branch is up to date with 'origin/branch2'.
+
+16. Променете го името на ставката бр. 4 во листата и направете commit со порака
+“Modify item #4”.
+Ivana@DESKTOP-MEP6UIC MINGW64 ~/Documents/GitWorkspace/SI_2022_lab1_163257 (branch2)
+$ vi shopping_list.txt
+
+Ivana@DESKTOP-MEP6UIC MINGW64 ~/Documents/GitWorkspace/SI_2022_lab1_163257 (branch2)
+$ git add shopping_list.txt
+
+Ivana@DESKTOP-MEP6UIC MINGW64 ~/Documents/GitWorkspace/SI_2022_lab1_163257 (branch2)
+$ git commit -m "Modify item #4"
+[branch2 aa24ae5] Modify item #4
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+17. Внесете ги досегашните логови во документацијата.
+
+18. Додадете 6та ставка во shopping_list.txt со промена на последниот commit. Сега
+пораката треба да гласи “Modify item #4 and add item #6”.
+Ivana@DESKTOP-MEP6UIC MINGW64 ~/Documents/GitWorkspace/SI_2022_lab1_163257 (branch2)
+$ vi shopping_list.txt
+
+Ivana@DESKTOP-MEP6UIC MINGW64 ~/Documents/GitWorkspace/SI_2022_lab1_163257 (branch2)
+$ git add shopping_list.txt
+
+Ivana@DESKTOP-MEP6UIC MINGW64 ~/Documents/GitWorkspace/SI_2022_lab1_163257 (branch2)
+$ git commit -m "Modify item #4 and add item #6"
+[branch2 0317194] Modify item #4 and add item #6
+ 1 file changed, 1 insertion(+)
+
+19. Внесете ги досегашните логови во документацијата.
+
+20. Префрлете се на гранката master и спојте ја гранката branch1 кон master.
+Ivana@DESKTOP-MEP6UIC MINGW64 ~/Documents/GitWorkspace/SI_2022_lab1_163257 (branch2)
+$ git checkout master
+Switched to branch 'master'
+Your branch and 'origin/master' have diverged,
+and have 1 and 1 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+Ivana@DESKTOP-MEP6UIC MINGW64 ~/Documents/GitWorkspace/SI_2022_lab1_163257 (branch1)
+$ git pull origin branch1
+From https://github.com/ijovanova/SI_2022_lab1_163257_popravka
+ * branch            branch1    -> FETCH_HEAD
+Already up to date.
+
+
+21. Спојте ја и гранката branch2 кон мастер.
+
+Ivana@DESKTOP-MEP6UIC MINGW64 ~/Documents/GitWorkspace/SI_2022_lab1_163257 (branch1)
+$ git pull origin branch2
+From https://github.com/ijovanova/SI_2022_lab1_163257_popravka
+ * branch            branch2    -> FETCH_HEAD
+Auto-merging shopping_list.txt
+CONFLICT (content): Merge conflict in shopping_list.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+22. Додадете ја текстуалната датотека во која водевте документација до сега
+(потпишана со бројот на вашиот индекс) и направете commit со порака “Add
+docs”.
+23. Синхронизирајте ги сите гранки со оддалечениот репозиториум.
+
+Ivana@DESKTOP-MEP6UIC MINGW64 ~/Documents/GitWorkspace/SI_2022_lab1_163257 (branch1|MERGING)
+$ git push origin master
+Enumerating objects: 14, done.
+Counting objects: 100% (13/13), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (8/8), 1004 bytes | 1004.00 KiB/s, done.
+Total 8 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/ijovanova/SI_2022_lab1_163257_popravka.git
+   24c149e..3764308  master -> master
+
+Ivana@DESKTOP-MEP6UIC MINGW64 ~/Documents/GitWorkspace/SI_2022_lab1_163257 (branch1|MERGING)
+$ git push origin branch1
+Everything up-to-date
+
+Ivana@DESKTOP-MEP6UIC MINGW64 ~/Documents/GitWorkspace/SI_2022_lab1_163257 (branch1|MERGING)
+$ git push origin branch2
+Everything up-to-date
+
